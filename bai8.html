@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<button type="button" onclick="kiemtra()">Choi</button>
+<script>
+    function kiemtra(){
+        min = parseInt(prompt('Nhap vao so nho nhat:'));
+        max = parseInt(prompt('Nhap vao so lon nhat:'));
+        x = parseInt(Math.random()*(max - min)+ min);
+        nhap = parseInt(prompt('Nhap vao so cua ban:'));
+        dem = 1;
+        while (nhap !=x && dem<3){
+            if(nhap < x){
+                alert('So ban nhap be hon ');
+            } else if(nhap > x){
+                alert('So ban nhap lon hon');
+            }
+            nhap = parseInt(prompt('Nhap vao so cua ban:'));
+            dem++;
+        }
+        if(nhap == x){
+            alert('Ban chon dung roi!');
+        }
+    }
+</script>
+</body>
+</html>
